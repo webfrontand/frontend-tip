@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bar</title>
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<style>
+		.container {
+			padding: 20px;
+		}
+		.notificationBar {
+			list-style-type: none;
+			padding: 0;
+			margin:0;
+			position: relative;
+		}
+
+		.notificationBar li {
+			margin-top: 60px;
+		}
+
+		.notificationBar li div {
+			margin-left: 50px;
+			margin-top: -24px;
+			background-color: #fff;
+		}
+
+
+		.notificationBar li i {
+			width: 30px;
+			height: 30px;
+			display: block;
+			text-align: center;
+			line-height: 30px;
+			border-radius: 50%;
+			border:1px solid #ddd;
+			background-color: #fff;
+		}
+
+		.notificationBar li i:after {
+			content: '';
+			width: 40px;
+			height: 1px;
+			position: absolute;
+			background-color: #000;
+			margin-top: 15px;
+			z-index: -1;
+		}
+
+		.notificationBar:after {
+			content: '';
+			width: 1px;
+			height: 100%;
+			background-color: #000;
+			position: absolute;
+			top: 4px;
+			left: 15px;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="notificationBar">
+			<li>
+				<i class="ion-social-javascript"></i>
+				<div>Third notification</div>
+			</li>
+			<li>
+				<i class="ion-social-css3"></i>
+				<div>Third notification</div>
+			</li>
+			<li>
+				<i class="ion-social-html5"></i>
+				<div>Third notification</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
