@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <style>
+            body, * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .header {
+                height: 45px;
+                background-color: #aaa;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                position: absolute;
+            }
+            
+            .top-navigation {
+                float: right;
+                display: none;
+            }
+            
+            .mobile-nav {
+                float: right;
+                margin: 0 30px 0 0;
+            }
+            
+            .mobile-nav span, .mobile-nav span:before, .mobile-nav span:after{
+                width: 32px;
+                height: 2px;
+                background-color: #000;
+                position: absolute;
+                top: 50%;
+            }
+            
+            .mobile-nav span:before {
+                content: '';
+                top: -6px;
+            }
+            
+            .mobile-nav span:after {
+                content: '';
+                top: 6px;
+            }
+            
+            .mainWrapper {
+                padding-top: 45px;
+            }
+            
+            .side-navigation {
+                width: 100%;
+                background-color: #333;
+                color: #fff;
+                height: 100vh;
+                visibility: hidden;
+            }
+            
+            .side-navigation.visible {
+                visibility: visible;
+            }
+            
+            .side-navigation ul {
+                
+            }
+            
+            .side-navigation ul li{
+                padding: 10px 20px;
+                border-bottom: 1px solid #999;
+            }
+            
+            .side-navigation ul li span {
+                font-size: 16px;
+            }
+            
+            .side-navigation ul li span:first-child {
+                color: #999;
+            }
+            
+            .main-content {
+                position: absolute;
+                top: 50px;
+                z-index: -1
+            }
+            
+            @media only screen and (min-width: 768px) {
+                .mobile-nav {
+                    visibility: hidden;
+                }
+                
+                .top-navigation {
+                    display: block;
+                }
+                
+                .side-navigation {
+                    visibility: visible;
+                    width: 90px;
+                }
+                
+                .side-navigation ul li span:last-child {
+                    visibility: hidden;
+                }
+                
+                .side-navigation ul li span:first-child {
+                    font-size: 24px;
+                    padding: 0 10px;
+                    color: #fff;
+                }
+                
+                .main-content {
+                    position: absolute;
+                    top: 50px;
+                    left: 200px;
+                    z-index: -1
+                }
+            }
+            
+            @media only screen and (min-width: 1170px) {
+                .side-navigation ul li span:last-child {
+                    visibility: visible;
+                }
+                .side-navigation {
+                    width: 160px;
+                }
+            }
+            
+        </style>
+        <script>
+            $(function(){
+                $('.mobile-nav').click(function(){
+                    $('.side-navigation').toggleClass('visible');
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <a href="javascript:void(0)" class="mobile-nav"><span></span></a>
+            <nav class="top-navigation">
+                ramsich
+            </nav>
+        </div>
+        
+        <div class="mainWrapper">
+            <nav class="side-navigation">
+                <ul>
+                    <li>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Tags</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-pie-graph"></i></span>
+                        <span>Analytics</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-person-stalker"></i></span>
+                        <span>Users</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-calendar"></i></span>
+                        <span>Calendar</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="main-content">
+                <h1>this is the main content</h1>
+            </div>
+        </div>
+    </body>
+</html>
