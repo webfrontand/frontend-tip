@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>Test</title>
+         <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #ddd;
+            height: 45px;
+            padding: 10px;
+            box-sizing: border-box;
+            position: absolute;
+            width:100%;
+        }
+        
+        .mobile-nav {
+            float: right;
+            margin: 0 30px;
+            
+        }
+        
+        .mobile-nav span, .mobile-nav span:before, .mobile-nav span:after{
+            width: 30px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            top: 50%;
+            
+        }
+        
+        .mobile-nav span:before {
+            content: '';
+            top: -6px;
+        }
+        
+        .mobile-nav span:after {
+            content: '';
+            top: 6px;
+        }
+        
+        .navbar {
+            padding-top: 50px;
+            background-color: #ccc;
+            height: 100vh;
+            cursor: pointer;
+            visibility: hidden;
+        }
+        
+        .navbar.visible {
+            visibility: visible;
+        }
+        
+        .navbar li {
+            padding: 20px;
+            border-bottom: 1px solid #fff;
+        }
+        
+        .navbar li:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .navbar li span {
+            font-size: 30px;
+        }
+        
+        @media screen and (min-width: 768px) {
+            .mobile-nav span {
+                visibility: hidden;
+            }
+            .navbar {
+                visibility: visible;
+                width: 250px;
+   
+            }
+        }
+        
+    </style>
+    <body>
+        <div class="header">
+            <a href="javascript:void(0)" class="mobile-nav"><span></span></a>
+            <nav class="title">Default</nav>
+        </div>
+        <div class="wrapper">
+            <nav class="navbar">
+                <ul>
+                    <li>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Tags</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-pie-graph"></i></span>
+                        <span>Analytics</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-person-stalker"></i></span>
+                        <span>Users</span>
+                    </li>
+                    <li>
+                        <span><i class="ion-calendar"></i></span>
+                        <span>Calendar</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="content">
+                아 통신이론 공부 너무나 하기싫은것..
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+               $('.mobile-nav').click(function(){
+                   $('.navbar').toggleClass('visible');
+               }) 
+            });
+        </script>
+    </body>
+</html>

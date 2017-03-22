@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <style>
+            body,html {
+                padding: 0;
+                margin: 0;
+            }
+            * {
+                box-sizing: border-box;
+      
+            }
+            
+            .header {
+                position: absolute;
+                height: 44px;
+                background: #ccc;
+                width: 100%;
+                z-index: 4
+            }
+            
+            nav {
+                position: absolute;
+                top: 60px;
+                background: #ddd;
+                width: 100%;
+                z-index: 3;
+                height: 100vh;
+                
+            }
+            
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            nav ul li {
+                padding: 20px;
+                border-bottom: 1px solid #ccc;
+            }
+            
+            @media screen and (min-width: 768px) {
+                nav {
+                    width: 150px;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <a href="#" class="navigation"><span></span></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <span><i class="ion-ios-pricetags"></i></span>
+                        <span>Users</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main-content">
+            <p>hello world</p>
+        </div>
+    </body>
+</html>
