@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+        <style>
+            .container {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+                width: 40px;
+                height: 32px;
+            }
+            
+            .stick, .stick:before, .stick:after {
+                width: 40px;
+                height: 4px;
+                background: tomato;
+                top: 50%;
+                position: absolute;
+                transition: all 0.6s;
+                transform-origin: 50% 50%;
+            }
+            
+            .stick:before {
+                content:'';
+                top: -13px;
+            }
+            
+            .stick:after {
+                content: '';
+                top: 13px;
+            }
+            
+            .stick.trigger {
+                transform: rotate(180deg)
+            }
+            
+        
+            .stick.trigger:after {
+                transform-origin: 100% 50%;
+                transform: translateY(-14px) rotate(-45deg) scaleX(0.7);
+
+
+            }
+            .stick.trigger:before {
+                transform-origin: 100% 50%;
+                transform: translateY(14px) rotate(45deg) scaleX(0.7);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="stick"></div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('.container').click(function(){
+                    $('.stick').toggleClass('trigger');
+                })
+            })
+        </script>
+    </body>
+</html>
