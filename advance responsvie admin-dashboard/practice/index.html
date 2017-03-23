@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>RESPONSIVE SITE</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <i class="ion-person-stalker"></i>
+                <span>Brand</span>
+            </div>
+            <a href="#" class="nav-trigger"><span></span></a>
+        </div>
+        <div class="side-nav active">
+            <nav>
+                <ul>
+					<li>
+						<a href="#">
+							<span><i class="fa fa-user"></i></span>
+							<span>Users</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+
+							<span><i class="fa fa-envelope"></i></span>
+							<span>Messages</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="#">
+							<span><i class="fa fa-bar-chart"></i></span>
+							<span>Analytics</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span><i class="fa fa-credit-card-alt"></i></span>
+							<span>Payments</span>
+						</a>
+					</li>
+				</ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            <div class="maintitle">
+                Test
+            </div>
+            <div class="main">
+                <div class="widget">
+					<div class="title">Number of views</div>
+					<div class="chart"></div>
+				</div>
+                <div class="widget">
+					<div class="title">Number of views</div>
+					<div class="chart"></div>
+				</div>
+                <div class="widget">
+					<div class="title">Number of views</div>
+					<div class="chart"></div>
+				</div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $('.nav-trigger').click(function(){
+                   $('.side-nav').toggleClass('active');
+                })
+            });
+        </script>
+    </body>
+</html>
+
