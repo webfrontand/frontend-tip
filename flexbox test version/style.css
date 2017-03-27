@@ -1,0 +1,25 @@
+body {
+    background-color: 
+}
+
+.container {
+    display: flex;
+/*    flex-flow: row wrap;*/
+}
+
+.box {
+    flex-basis: 400;
+    flex-grow: 10;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .box {
+        flex-basis: 200;
+    }
+}
+
