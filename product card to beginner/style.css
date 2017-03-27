@@ -64,4 +64,44 @@ body {
 
 .card-body {
     height: 255px;
+    background-color: #fff;
+    border-radius: 0 0 25px 25px;
+}
+
+.product-title {
+    padding: 20px 20px 5px 20px;
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product-title b {
+    font-weight: 900;
+}
+
+.badge {
+    position: relative;
+    font-size: 10px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #11e95b;
+    padding: 2px 5px;
+    border-radius: 4px;
+    top: -2px;
+    margin-left: 5px;
+}
+
+.product-caption {
+    display: block;
+    padding: 0 20px;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.product-rating {
+    padding: 0 20px;
+    font-size: 11px;
 }
