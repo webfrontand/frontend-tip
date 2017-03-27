@@ -51,7 +51,7 @@
 .side-nav {
     position: absolute;
     margin-top: 60px;
-    width: 100%;
+    width: 30%;
     background-color: #ddd;
     visibility: hidden;
     z-index: 9999;
@@ -83,4 +83,14 @@
     border-radius: 5px;
 }
 
-.content 
+.content .widget p {
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:768px) {
+    .side-nav {
+        width: 70%;
+    }
+}
